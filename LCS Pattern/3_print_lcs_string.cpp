@@ -24,7 +24,7 @@ string getstring(string a, string b){
             }
         }
 
-    while(m!=0 || n!=0){
+    while(m>=0 && n>=0){
         if(a[m] == b[n]) {
             res = a[m]+res;
             m-- ; n--;
@@ -39,8 +39,8 @@ string getstring(string a, string b){
 
 int main()
 {
-    string a = "hello";
-    string b = "hkelo";
+    string a = "abac";
+    string b = "cab";
     cout<<getstring(a,b);
 return 0;
 }
