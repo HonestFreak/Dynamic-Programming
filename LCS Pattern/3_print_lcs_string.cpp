@@ -2,6 +2,7 @@
 #include<vector>
 using namespace std;
 
+//prints the longest common subsequence
 string getstring(string a, string b){
     string res = "";
     int m=a.size(),n=b.size();

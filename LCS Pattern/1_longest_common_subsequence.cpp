@@ -2,7 +2,8 @@
 #include<vector>
 using namespace std;
 
- int lcs(string text1, string text2) {
+//returns longest common subsequence's length
+int lcs(string text1, string text2) {
         int m=text1.size(),n=text2.size();
         int dp[m+1][n+1];
         for(int i=0;i<m+1;i++){

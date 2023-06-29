@@ -2,8 +2,8 @@
 #include<vector>
 using namespace std;
 
-//returns longest common substring's length
-int lcs(string text1, string text2) {
+//length of shortest supersequence
+int shortest_superseq_val(string text1, string text2) {
         int m=text1.size(),n=text2.size();
         int dp[m+1][n+1];
         for(int i=0;i<m+1;i++){
@@ -21,13 +21,13 @@ int lcs(string text1, string text2) {
                } 
             }
         }
-        return dp[m][n];
+        m+n-dp[m][n];
     }
 
 int main()
 {
-    string a = "hello";
-    string b = "hkelo";
-    cout<<lcs(a,b);
+    string a = "abac";
+    string b = "cab";
+    cout<<shortest_superseq_val(a,b);
 return 0;
 }
