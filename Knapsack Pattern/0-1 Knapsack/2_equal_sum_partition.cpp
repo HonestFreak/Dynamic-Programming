@@ -4,20 +4,22 @@
 using namespace std;
 
 bool issubset(vector<int> v, int w) {
-    int n = v.size();
-    int dp[n + 1][w + 1];
+   int n = v.size();
+    bool dp[n + 1][w + 1];
 
     for (int i = 0; i <= n; i++) {
         for (int j = 0; j <= w; j++) {
-            if (i == 0 || j == 0)
-                dp[i][j] = 0;
+            if (j == 0)
+                dp[i][j] = true;
+            else if (i == 0)
+                dp[i][j] = false;
             else if (v[i - 1] <= j)
-                dp[i][j] = max(v[i - 1] + dp[i - 1][j - v[i - 1]], dp[i - 1][j]);
+                dp[i][j] = dp[i - 1][j - v[i - 1]] || dp[i - 1][j];
             else
                 dp[i][j] = dp[i - 1][j];
         }
     }
-    return dp[n][w]==w;
+    return dp[n][w];
 }
 
 bool equalpart(vector<int> v){
@@ -28,7 +30,7 @@ bool equalpart(vector<int> v){
 }
 
 int main() {
-    vector<int> v = { 1,5,11,5};
+    vector<int> v = { 6,4,2};
     cout<<equalpart(v);
     return 0;
 }
