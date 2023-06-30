@@ -25,8 +25,6 @@ int subset_diff(vector<int> v, int w) {
 int equalpart(vector<int> v, int diff){
     int sum = 0;
     for(int i: v) sum+= i;
-    cout<<sum<<endl;
-    cout<<(sum-diff)/2<<endl;
     return subset_diff(v, (sum-diff)/2); 
 }
 
