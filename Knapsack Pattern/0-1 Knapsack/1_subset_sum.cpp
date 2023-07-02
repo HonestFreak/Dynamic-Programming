@@ -1,6 +1,8 @@
 #include<iostream>
 #include<vector>
 using namespace std;
+//returns if it is possible to get the required sum from the elements
+//of the array
 
 bool subset_sum(vector<int> v, int w) {
     int n = v.size();
@@ -22,8 +24,8 @@ bool subset_sum(vector<int> v, int w) {
 }
 
 int main() {
-    vector<int> v = { 5, 4, 7 };
-    int w = 10;
+    vector<int> v = { };
+    int w = 0;
     cout << subset_sum(v, w) << endl;
     return 0;
 }

@@ -20,8 +20,6 @@ int countSubsets(vector<int>& nums, int n, int M)
             }
         }
 
-        //t[0][0] = 1;
-
         for(int i=1; i<=n; i++)
         {
             for(int j=0; j<=M; j++)
