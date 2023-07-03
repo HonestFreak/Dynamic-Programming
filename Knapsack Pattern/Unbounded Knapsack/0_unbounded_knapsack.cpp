@@ -11,7 +11,8 @@ int subset_sum(vector<int> v, int w) {
             if (i == 0 || j == 0)
                 dp[i][j] = 0;
             else if (v[i - 1] <= j)
-                dp[i][j] = max(v[i - 1] + dp[i][j - v[i - 1]], dp[i - 1][j]); // removed the '-1' from dp[i-1]
+                dp[i][j] = max(v[i - 1] + dp[i][j - v[i - 1]], dp[i - 1][j]); 
+                // removed the '-1' from dp[i-1]
             else
                 dp[i][j] = dp[i - 1][j];
         }
