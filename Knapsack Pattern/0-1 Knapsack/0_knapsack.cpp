@@ -21,7 +21,7 @@ int subset_sum(vector<int> v, int w) {
 
 int main() {
     vector<int> v = { 5, 4,  7 , 10};
-    int w = 15;
+    int w = 18;
     cout << "Max Subset Sum: " << subset_sum(v, w) << endl;
     return 0;
 }
