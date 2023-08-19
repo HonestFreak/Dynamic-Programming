@@ -15,6 +15,7 @@ int solve(int arr[], int i, int j){
     t[i][j]=ans;
     return ans;
 }
+
 int main(){
     int arr[] = {40, 20, 30, 10, 30};
     int size = sizeof(arr)/sizeof(arr[0]);

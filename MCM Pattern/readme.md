@@ -63,3 +63,7 @@ int main(){
             t[i][j] = -1;
     cout<< solve(arr,1,size-1);
 }
+
+palindrome partitioning
+given a string, make minimum paritions such that all substrings are palindrome.
+worst case answer = n-1
