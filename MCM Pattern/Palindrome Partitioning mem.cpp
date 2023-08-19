@@ -17,8 +17,14 @@ int solve(string s, int i, int j){
     if(i>=j) return 0;
     if(ispalindrome(s,i,j)) return 0;
     if(t[i][j]!=-1) return t[i][j];
+    int left,right;
     for(int k=i; k < j; k++){
-        int tempans = solve(s,i,k) + solve(s,k+1,j) + 1;
+        if(t[i][k]!=-1) left = t[i][k];
+        else left = solve(s,i,k);
+        if(t[k+1][j]!=-1) right = t[k+1][j];
+        else right = solve(s,k+1,j);
+
+        int tempans = left + right + 1;
         ans=min(ans,tempans);
     }
     return ans;
